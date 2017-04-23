@@ -1,0 +1,16 @@
+####ErrorDocument 404 http://www.lennartv.nl
+RewriteEngine on
+
+
+RewriteRule ^auth/?$ api/authenticate.php
+RewriteRule ^auth/([0-9]+)/?$ api/authenticate.php?id=$1
+
+
+RewriteRule ^api/users/?$ api/users.php
+RewriteRule ^api/users/([0-9]+)/?$ api/users.php?id=$1
+
+RewriteRule ^api/contacts/?$ api/contacts.php
+RewriteRule ^api/contacts/([0-9]+)/?$ api/contacts.php?id=$1
+
+RewriteRule ^api/access/?$ api/access.php
+RewriteRule ^api/access/([0-9]+)/?$ api/access.php?id=$1
